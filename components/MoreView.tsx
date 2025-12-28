@@ -43,7 +43,7 @@ const ToggleItem: React.FC<Omit<ListItemProps, 'isToggle'>> = ({ icon: Icon, tit
 };
 
 interface MoreViewProps {
-  onNavigate: (view: 'settings') => void;
+  onNavigate: (view: string) => void;
 }
 
 const MoreView: React.FC<MoreViewProps> = ({ onNavigate }) => {
@@ -56,15 +56,15 @@ const MoreView: React.FC<MoreViewProps> = ({ onNavigate }) => {
                 <ToggleItem icon={ICONS.Glasses} title="Incognito mode" subtitle="Pauses reading history" />
             </div>
             <div className="pt-2">
-                 <ListItem icon={ICONS.Download} title="Download queue" />
-                 <ListItem icon={ICONS.FolderKanban} title="Categories" />
-                 <ListItem icon={ICONS.BarChart} title="Statistics" />
-                 <ListItem icon={ICONS.FolderArchive} title="Data and storage" />
+                 <ListItem icon={ICONS.Download} title="Download queue" onClick={() => onNavigate('download_queue')} />
+                 <ListItem icon={ICONS.FolderKanban} title="Categories" onClick={() => onNavigate('categories')} />
+                 <ListItem icon={ICONS.BarChart} title="Statistics" onClick={() => onNavigate('statistics')} />
+                 <ListItem icon={ICONS.FolderArchive} title="Data and storage" onClick={() => onNavigate('data_storage')} />
             </div>
              <div className="pt-2">
                  <ListItem icon={ICONS.Settings} title="Settings" onClick={() => onNavigate('settings')} />
-                 <ListItem icon={ICONS.Info} title="About" />
-                 <ListItem icon={ICONS.HelpCircle} title="Help" />
+                 <ListItem icon={ICONS.Info} title="About" onClick={() => onNavigate('about')} />
+                 <ListItem icon={ICONS.HelpCircle} title="Help" onClick={() => onNavigate('help')} />
             </div>
         </div>
     </div>
