@@ -1,0 +1,5 @@
+{
+  "name": "OTAKU Sarathi",
+  "description": "A web-based manga reader application named OTAKU Sarathi, focusing on library management and browsing from various sources with a clean, dark-themed interface using React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
